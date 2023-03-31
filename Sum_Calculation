@@ -1,0 +1,21 @@
+import java.util.Scanner;
+import java.util.SimpleTimeZone;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Insert the value of n:");
+        String input = scanner.nextLine();
+        double n = Double.parseDouble(input);
+        System.out.println("Insert the value of x:");
+        String input2 = scanner.nextLine();
+        double x = Double.parseDouble(input2);
+        double sum = 1;
+        double result = 1;
+        for (double i = 1; i <= n; i++) {
+            result = result * i;
+            sum = sum + result / Math.pow(x, i);
+        }
+        System.out.printf("The sum is %.5f", sum);
+    }
+}
